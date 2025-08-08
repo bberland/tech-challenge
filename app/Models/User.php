@@ -47,4 +47,9 @@ class User extends Authenticatable
             'role' => UserRole::class
         ];
     }
+
+    public function maintenanceOrders()
+    {
+        return $this->hasMany(MaintenanceOrder::class);
+    }
 }
